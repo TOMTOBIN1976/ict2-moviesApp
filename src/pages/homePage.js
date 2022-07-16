@@ -6,7 +6,7 @@ import {getMovies} from '../api/tmdb-api'
 import AddToFavouritesIcon from '../components/cardIcons/addToFavourites'
 
 
-const HomePage = (props) => {
+const HomePage = () => {
   const {  data, error, isLoading, isError }  = useQuery('discover', getMovies)
 
   if (isLoading) {
@@ -21,7 +21,6 @@ const HomePage = (props) => {
   // These three lines are redundant; we will replace them laterg.
   const favourites = movies.filter(m => m.favouurite)
   localStorage.setItem('favourites', JSON.stringify(favourites))
-  const addToFavourites = (movieId) => true 
 
   return (
     <PageTemplate

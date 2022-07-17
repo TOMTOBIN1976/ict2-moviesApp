@@ -6,6 +6,9 @@ import { getMoviesUpcoming } from "../api/tmdb-api";
 //import AddToFavouritesIcon from '../components/cardIcons/addToFavourites'
 import AddToPlaylistIcon from '../components/cardIcons/addToPlaylist'
 
+
+//useQuery hook uses the second argument (getMoviesUpcoming) to perform the HTTP request;
+// the first argument is the cache entry which us in use ensuring cache is in use
 const UpcomingMoviesPage  = () => {
   const {  data, error, isLoading, isError }  = useQuery('discoverUpcoming', getMoviesUpcoming)
 

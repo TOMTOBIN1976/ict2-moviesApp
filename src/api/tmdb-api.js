@@ -72,7 +72,7 @@ export const getMovies = () => {
         return json.results;
       });
   };
-
+//Get upcoming movies
   export const getMoviesUpcoming = () => {
     return fetch(
       `https://api.themoviedb.org/3/movie/upcoming?api_key=${process.env.REACT_APP_TMDB_KEY}&page=1`
